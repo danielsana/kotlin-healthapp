@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#DEC7C7"
+        android:orientation="vertical">
+    <!-- Introduce Heading TextView -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="HEALTH APP"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:textAlignment="center"
+        android:layout_margin="20dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardabout"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                app:cardElevation="5dp"
+                app:cardCornerRadius="20dp"
+                android:layout_margin="5dp"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <!-- Above Linear Layout put ImageView and TextView Vertically -->
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:padding="25dp"
+                        android:src="@drawable/about"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="5dp"
+                        android:text="About"/>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

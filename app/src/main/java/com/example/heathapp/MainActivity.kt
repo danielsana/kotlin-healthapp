@@ -1,5 +1,6 @@
 package com.example.heathapp
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -15,6 +16,12 @@ class MainActivity : AppCompatActivity() {
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
+        }
+
+        val about = findViewById<androidx.cardview.widget.CardView>(R.id.cardabout)
+        about.setOnClickListener {
+            val cardabout = Intent(applicationContext,aboutActivity::class.java)
+            startActivity(cardabout)
         }
     }
 }
